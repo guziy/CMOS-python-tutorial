@@ -38,3 +38,8 @@ table.logo{
 .input.hbox{
 	width: 130%;
 }
+
+div.text_cell_render.border-box-sizing.rendered_html span#authors{
+	color: gray;
+	font-size: 70%;
+}
