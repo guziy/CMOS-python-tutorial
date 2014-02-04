@@ -4,14 +4,13 @@ CMOS-python-tutorial
 Python tutorial at CMOS 2014
 
 
-To launch the presentation locally
------
+### To launch the presentation locally
 
     ./present.sh
 
-To author the presentation in the IPython notebook    
------
-In the project folder launch the ipython:
+### To author the presentation in the IPython notebook    
+
+In the project folder launch ipython:
 
     ipython notebook --pylab inline
     
