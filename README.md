@@ -10,7 +10,7 @@ Python tutorial at CMOS 2014
 
 ### To author the presentation in the IPython notebook    
 
-In the project folder launch the ipython:
+In the project folder launch ipython:
 
     ipython notebook --pylab inline
     
