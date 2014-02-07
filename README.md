@@ -35,6 +35,11 @@ The page with a list of notebooks will appear in your browser window. Open the n
 
 
 The list above are the python packages and some of them have C/Fortran dependencies:
+Before installing any native libraries required by the python packages add the ubuntugis repository to get the latest versions of the libs.
+
+    sudo apt-add-repository ppa:ubuntugis/ubuntugis-unstable
+    sudo apt-get update
+
 
 * netcdf4-python : NetCDF4 and HDF5 (can be installed using `apt-get install ...`)
 * scipy : requires fortran compiler gfortran 
