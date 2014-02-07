@@ -1,7 +1,7 @@
 CMOS-python-tutorial
 ====================
 
-Python tutorial at CMOS 2014
+Python tutorial at [CMOS 2014](http://www.cmos.ca/congress2014/index.php/en/)
 
 
 ### To launch the presentation locally
