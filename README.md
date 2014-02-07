@@ -18,6 +18,7 @@ The page with a list of notebooks will appear in your browser window. Open the n
 
 
 ###Dependencies
+
 * IPython
 * matplotlib
 * GDAL
@@ -29,5 +30,4 @@ The page with a list of notebooks will appear in your browser window. Open the n
 * numexpr
 * cython
 * pandas
-
 * Maybe iris and cartopy if decide to cover..
