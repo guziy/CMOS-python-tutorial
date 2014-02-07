@@ -18,14 +18,16 @@ The page with a list of notebooks will appear in your browser window. Open the n
 
 
 ###Dependencies
-IPython
-matplotlib
-GDAL
-pillow
-fiona
-netcdf4-python
-scipy
-numpy
-numexpr
-cython
-pandas
+* IPython
+* matplotlib
+* GDAL
+* pillow
+* fiona
+* netcdf4-python
+* scipy
+* numpy
+* numexpr
+* cython
+* pandas
+
+* Maybe iris and cartopy if decide to cover..
