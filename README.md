@@ -21,6 +21,7 @@ The page with a list of notebooks will appear in your browser window. Open the n
 
 * IPython
 * matplotlib
+* basemap
 * GDAL
 * pillow
 * fiona
@@ -31,3 +32,12 @@ The page with a list of notebooks will appear in your browser window. Open the n
 * cython
 * pandas
 * Maybe iris and cartopy if decide to cover..
+
+
+The list above are the python packages and some of them have C/Fortran dependencies:
+
+* netcdf4-python : NetCDF4 and HDF5 (can be installed using `apt-get install ...`)
+* scipy : requires fortran compiler gfortran 
+* basemap: requires geos (install libgeos-dev using apt-get)
+* GDAL and Fiona: require libgdal (install libgdal-dev using apt-get )
+
