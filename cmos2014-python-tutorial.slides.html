@@ -1738,7 +1738,7 @@ text-align: inherit;
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[261]:
+In&nbsp;[3]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="c">#Necessary imports</span>
@@ -1800,7 +1800,7 @@ In&nbsp;[261]:
 <h3 id="talk-on-python-history-by-guido-van-rossum-here.">Talk on Python history by Guido Van Rossum <a href="http://www.youtube.com/watch?v=ugqu10JV7dk">here</a>.</h3>
 </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="cool-thing-ive-done-with-python-lake-level-observations">Cool thing I've done with python: lake level observations</h1>
+<h1 id="cool-things-ive-done-with-python-lake-level-observations">Cool things I've done with python: lake level observations</h1>
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
@@ -3532,7 +3532,7 @@ In&nbsp;[169]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[170]:
+In&nbsp;[6]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">from</span> <span class="nn">netCDF4</span> <span class="kn">import</span> <span class="n">Dataset</span>
@@ -3555,7 +3555,7 @@ In&nbsp;[170]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[171]:
+In&nbsp;[7]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">ds</span><span class="o">.</span><span class="n">createDimension</span><span class="p">(</span><span class="s">&quot;x&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
@@ -3571,12 +3571,12 @@ In&nbsp;[171]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[171]:</div>
+    Out[7]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 
 <pre>
-&lt;netCDF4.Dimension at 0x11c204460&gt;
+&lt;netCDF4.Dimension at 0x1075df5a0&gt;
 </pre>
 
 </div>
@@ -3592,11 +3592,15 @@ In&nbsp;[171]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[172]:
+In&nbsp;[8]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="n">var1</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s">&quot;field1&quot;</span><span class="p">,</span> <span class="s">&quot;f4&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s">&quot;time&quot;</span><span class="p">,</span> <span class="s">&quot;x&quot;</span><span class="p">,</span> <span class="s">&quot;y&quot;</span><span class="p">))</span>
 <span class="n">var2</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s">&quot;field2&quot;</span><span class="p">,</span> <span class="s">&quot;f4&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s">&quot;time&quot;</span><span class="p">,</span> <span class="s">&quot;x&quot;</span><span class="p">,</span> <span class="s">&quot;y&quot;</span><span class="p">))</span>
+
+<span class="c">#add netcdf attributes</span>
+<span class="n">var1</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s">&quot;m/s&quot;</span>
+<span class="n">var1</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s">&quot;zonal wind speed&quot;</span>
 </pre></div>
 
 </div>
@@ -3609,7 +3613,7 @@ In&nbsp;[172]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[173]:
+In&nbsp;[9]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="c">#generate random data and tell to the program where it should go</span>
@@ -3619,6 +3623,47 @@ In&nbsp;[173]:
 <span class="c">#actually write data to the disk</span>
 <span class="n">ds</span><span class="o">.</span><span class="n">close</span><span class="p">();</span>
 </pre></div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[10]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="o">%%</span><span class="k">bash</span>
+<span class="c">#check the file header:</span>
+<span class="n">ncdump</span> <span class="o">-</span><span class="n">h</span> <span class="n">test</span><span class="o">.</span><span class="n">nc</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+netcdf test {
+dimensions:
+	x = 20 ;
+	y = 20 ;
+	time = UNLIMITED ; // (10 currently)
+variables:
+	float field1(time, x, y) ;
+		field1:units = &quot;m/s&quot; ;
+		field1:long_name = &quot;zonal wind speed&quot; ;
+	float field2(time, x, y) ;
+}
+
+</pre>
+</div>
+</div>
 
 </div>
 </div>
@@ -5145,7 +5190,7 @@ SmCizGAwGAwGJTBRZjAYDAaDEv4/9/I4kHxrGzoAAAAASUVORK5CYII=
 </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="download-and-analyse-teleconnection-indexes">Download and analyse teleconnection indexes</h1>
-<p>For pandas 1D examples we will load, plot and correlate different teleconnection indices</p>
+<p>For pandas 1D examples we will load, plot and correlate different teleconnection indices (<a href="http://www.cpc.ncep.noaa.gov/products/precip/CWlink/daily_ao_index/teleconnections.shtml">source</a>).</p>
 </div></section><section>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
@@ -5286,7 +5331,7 @@ In&nbsp;[186]:
 
 </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="tell-to-pandas-that-the-indices-are-actually-dates">Tell to pandas that the indices are actually dates</h1>
+<h1 id="plot-the-timeseries">Plot the timeseries</h1>
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
