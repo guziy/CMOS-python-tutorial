@@ -9,6 +9,9 @@
 
 Reveal.initialize({
 
+    width: '100%',
+    height: '100%',
+
     // Display controls in the bottom right corner
     //controls: true,
 
