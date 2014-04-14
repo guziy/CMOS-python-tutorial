@@ -1843,6 +1843,21 @@ Oleksandr (Sasha) Huziy, Jonathan Doyle, Martin Deshaies-Jacques
 </ul>
 </div>
 </div>
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="more-cool-examples-">More cool examples:</h1>
+<ul>
+<li><a href="http://matplotlib.org/gallery.html">matplotlib</a></li>
+<li><a href="http://www.pyngl.ucar.edu/Examples/gallery.shtml">PyNGL</a></li>
+<li><a href="http://scitools.org.uk/cartopy/docs/latest/gallery.html">Cartopy</a></li>
+</ul>
+</div>
+</div>
 </div></section>
     </section><section>
     <section>
@@ -3207,7 +3222,7 @@ In&nbsp;[39]:
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[40]:
+In&nbsp;[3]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -3215,6 +3230,9 @@ In&nbsp;[40]:
 <span class="c">#Creating a numpy array from list</span>
 <span class="n">np_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">86</span><span class="p">,</span> <span class="mf">18.9</span><span class="p">])</span>
 <span class="k">print</span> <span class="n">np_arr</span>
+<span class="k">print</span> <span class="n">np_arr</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="k">print</span> <span class="n">np_arr</span> <span class="o">**</span> <span class="mi">2</span>
+<span class="k">print</span> <span class="n">np_arr</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">np_arr</span>
 </pre></div>
 
 </div>
@@ -3229,6 +3247,10 @@ In&nbsp;[40]:
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
 [  1.   23.    4.    3.5   6.    7.   86.   18.9]
+[  2.   24.    5.    4.5   7.    8.   87.   19.9]
+[  1.00000000e+00   5.29000000e+02   1.60000000e+01   1.22500000e+01
+   3.60000000e+01   4.90000000e+01   7.39600000e+03   3.57210000e+02]
+[   6.   138.    24.    21.    36.    42.   516.   113.4]
 
 </pre>
 </div>
@@ -3502,9 +3524,8 @@ Sum over (-0.1 &gt; arr) or (arr &gt; 0.1):  -8.14702898694
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="exercises-numpy">Exercises: Numpy</h1>
 <ul>
+<li>TODO: correlation field from 2 3d fields.</li>
 <li>Generate a 10 x 3 array of random numbers (in range [0,1]). For each row, pick the number closest to 0.5 (<a href="http://scipy-lectures.github.io/intro/numpy/exercises.html#array-manipulations">source</a>) <em>Hint:</em> use <code>np.argmin</code>.</li>
-</ul>
-<ul>
 <li>Checkout numpy for MATLAB users transition <a href="http://wiki.scipy.org/NumPy_for_Matlab_Users">table</a>.</li>
 </ul>
 </div>
@@ -16147,8 +16168,6 @@ SUVORK5CYII=
 <h1 id="ckdtree">cKDTree</h1>
 <ul>
 <li>Is a class defined in <code>scipy.spatial</code> package.</li>
-</ul>
-<ul>
 <li>Alternatives: <code>pyresample</code> and <code>basemap.interp</code></li>
 </ul>
 </div>
@@ -16241,14 +16260,8 @@ SUVORK5CYII=
 <h1 id="speeding-up-your-code">Speeding up your code</h1>
 <ul>
 <li>Avoid loops and try to make use of Numpy/Scipy/Pandas functionality as much as possible</li>
-</ul>
-<ul>
 <li>If you have a lot of computations the speedup can be achieved by delegating the computations to the NumExpr module.</li>
-</ul>
-<ul>
 <li>You can use Cython to compile libraries to get C-like speed.</li>
-</ul>
-<ul>
 <li>Use multiprocessing module if the tasks are fairly independent and cannot be solved using the above methods</li>
 </ul>
 </div>
@@ -16732,20 +16745,13 @@ In&nbsp;[131]:
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="resources">Resources</h1>
 <ul>
-<li><p>Python: <a href="http://www.python.org/"><a href="http://www.python.org/">http://www.python.org/</a></a></p>
-</li>
-<li><p>IPython: <a href="http://ipython.org/"><a href="http://ipython.org/">http://ipython.org/</a></a></p>
-</li>
-<li><p>NumPy: <a href="http://www.numpy.org/"><a href="http://www.numpy.org/">http://www.numpy.org/</a></a> - there is a page NumPy for MATLAB users, might be useful for those familiar with MATLAB.</p>
-</li>
-<li><p>SciPy: <a href="http://www.scipy.org/"><a href="http://www.scipy.org/">http://www.scipy.org/</a></a></p>
-</li>
-<li><p>Scientific python lectures: <a href="http://scipy-lectures.github.io/"><a href="http://scipy-lectures.github.io/">http://scipy-lectures.github.io/</a></a></p>
-</li>
-<li><p>Matplotlib: <a href="http://matplotlib.org/"><a href="http://matplotlib.org/">http://matplotlib.org/</a></a></p>
-</li>
-<li><p>Scitools (iris and cartopy): <a href="http://scitools.org.uk/index.html"><a href="http://scitools.org.uk/index.html">http://scitools.org.uk/index.html</a></a></p>
-</li>
+<li>Python: <a href="http://www.python.org/"><a href="http://www.python.org/">http://www.python.org/</a></a></li>
+<li>IPython: <a href="http://ipython.org/"><a href="http://ipython.org/">http://ipython.org/</a></a></li>
+<li>NumPy: <a href="http://www.numpy.org/"><a href="http://www.numpy.org/">http://www.numpy.org/</a></a> - there is a page NumPy for MATLAB users, might be useful for those familiar with MATLAB.</li>
+<li>SciPy: <a href="http://www.scipy.org/"><a href="http://www.scipy.org/">http://www.scipy.org/</a></a></li>
+<li>Scientific python lectures: <a href="http://scipy-lectures.github.io/"><a href="http://scipy-lectures.github.io/">http://scipy-lectures.github.io/</a></a></li>
+<li>Matplotlib: <a href="http://matplotlib.org/"><a href="http://matplotlib.org/">http://matplotlib.org/</a></a></li>
+<li>Scitools (iris and cartopy): <a href="http://scitools.org.uk/index.html"><a href="http://scitools.org.uk/index.html">http://scitools.org.uk/index.html</a></a></li>
 </ul>
 </div>
 </div>
@@ -16758,16 +16764,11 @@ In&nbsp;[131]:
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="resources">Resources</h1>
 <ul>
-<li><p>NetCDF4: <a href="http://netcdf4-python.googlecode.com/svn/trunk/docs/netCDF4-module.html"><a href="http://netcdf4-python.googlecode.com/svn/trunk/docs/netCDF4-module.html">http://netcdf4-python.googlecode.com/svn/trunk/docs/netCDF4-module.html</a></a></p>
-</li>
-<li><p>Basemap: <a href="http://matplotlib.org/basemap/"><a href="http://matplotlib.org/basemap/">http://matplotlib.org/basemap/</a></a></p>
-</li>
-<li><p><a href="http://nbviewer.ipython.org/github/mqlaql/geospatial-data/blob/master/Geospatial-Data-with-Python.ipynb">Notebook on shape files</a></p>
-</li>
-<li><p>My favourite python IDE: <a href="http://www.jetbrains.com/pycharm/">Pycharm</a>, you might also checkout many other like Eclipse, Netbeans, Spyder...</p>
-</li>
-<li><p>On creating presentations using IPython and a lot of other things: <a href="http://www.damian.oquanta.info/index.html">Damian Avilla&#39;s blog</a>.</p>
-</li>
+<li>NetCDF4: <a href="http://netcdf4-python.googlecode.com/svn/trunk/docs/netCDF4-module.html"><a href="http://netcdf4-python.googlecode.com/svn/trunk/docs/netCDF4-module.html">http://netcdf4-python.googlecode.com/svn/trunk/docs/netCDF4-module.html</a></a></li>
+<li>Basemap: <a href="http://matplotlib.org/basemap/"><a href="http://matplotlib.org/basemap/">http://matplotlib.org/basemap/</a></a></li>
+<li><a href="http://nbviewer.ipython.org/github/mqlaql/geospatial-data/blob/master/Geospatial-Data-with-Python.ipynb">Notebook on shape files</a></li>
+<li>My favourite python IDE: <a href="http://www.jetbrains.com/pycharm/">Pycharm</a>, you might also checkout many other like Eclipse, Netbeans, Spyder...</li>
+<li>On creating presentations using IPython and a lot of other things: <a href="http://www.damian.oquanta.info/index.html">Damian Avilla&#39;s blog</a>.</li>
 </ul>
 </div>
 </div>
