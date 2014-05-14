@@ -23,7 +23,14 @@ div.logo img{
     display: none;
 }
 
+/**
 .inner_cell .input_area .highlight pre span{
+    font-size:150%;
+    line-height: 1.2;
+}
+*/
+
+.inner_cell .input_area .highlight pre span {
     font-size:150%;
     line-height: 1.2;
 }
