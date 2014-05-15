@@ -43,7 +43,8 @@ def download_link(url, local_path):
     with open(local_path, "wb") as local_file:
         local_file.write(s.read())   
 
-if __name__ == "__main__":
+
+def main():
     download_folder()
 
     polygons = []
@@ -78,4 +79,10 @@ if __name__ == "__main__":
     ax.add_collection(pcol)
     bworld.colorbar(pcol)
     bworld.drawcoastlines()
-    plt.show()
+    plt.show()   
+
+
+
+##Entry point
+if __name__ == "__main__":
+    main()
