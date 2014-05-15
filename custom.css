@@ -75,10 +75,6 @@ div.text_cell_render.border-box-sizing.rendered_html span#authors{
     line-height: 1.5; 
 }
 
-.prompt {
-    font-size: 120%; 
-}
-
 .CodeMirror-lines {
     font-size: 120%; 
 }
