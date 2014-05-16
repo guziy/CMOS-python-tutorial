@@ -45,8 +45,12 @@ def download_link(url, local_path):
 
 
 def main():
+    """
+    Main function
+    """
     download_folder()
 
+    #Read country polygons and associated population
     polygons = []
     populations = []  
     with fiona.open('countries/cntry00.shp', 'r') as inp:
