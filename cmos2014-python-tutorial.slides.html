@@ -2104,7 +2104,7 @@ In&nbsp;[9]:
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Use the &#39;Tab&#39; auto-complete in iPython to list other <code>math</code> functions.</p>
-<p>Note: <code>math</code> on works on scalars, not arrays (with arrays we will use <code>numpy</code>)</p>
+<p>Note: <code>math</code> only works on scalars, not arrays (with arrays we will use <code>numpy</code>)</p>
 </div>
 </div>
 </div>
@@ -2125,7 +2125,7 @@ In&nbsp;[9]:
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Basic data types </p>
-<pre><code>string (str): &#39;This is a string&#39;, &quot;This too&quot;
+<pre><code>string (str): &#39;This is a string&#39;, &quot;&#39;This&#39; too&quot;
 int: 0, 1, 20, 1000
 float: 0.0, 1.0, 20., 1000.0000001
 bool: True, False
@@ -2194,8 +2194,8 @@ array: numpy.array([1,2,3,4])
         print 'This condition failed to pass'
 
     else:
-        # If neither condition is sadisfied
-        print 'Warning, condition was not sadisfied!'
+        # If neither condition is satisfied
+        print 'Warning, condition was not satisfied!'
 </pre>     
 </div>
 </div>
@@ -2584,7 +2584,7 @@ In&nbsp;[]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="you-can-use-calendar-module-for-different-convenience-functions-with-dates">You can use calendar module for different convenience functions with dates</h1>
+<h1 id="you-can-use-the-calendar-module-for-different-convenience-functions-with-dates">You can use the calendar module for different convenience functions with dates</h1>
 <h2 id="example-how-many-days-in-a-given-month-in-3001-">Example: how many days in a given month in 3001?</h2>
 </div>
 </div>
@@ -3538,7 +3538,7 @@ In&nbsp;[18]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="c">#generate random data and tell to the program where it should go</span>
+<div class="highlight"><pre><span class="c">#generate random data and tell the program where it should go</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
 <span class="n">var1</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">data</span>
 <span class="n">var2</span><span class="p">[:]</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">data</span> <span class="o">+</span> <span class="mi">10</span>
